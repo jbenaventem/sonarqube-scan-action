@@ -91,7 +91,7 @@ jobs:
      - name: Run Trivy vulnerability scanner
        uses: aquasecurity/trivy-action@master
        with:
-          image-ref: 'sonarqube:latest'
+          image-ref: 'sonarsource/sonar-scanner-cli:4.6'
           format: 'sarif'
           output: 'trivy-results.sarif'
      - name: Upload Trivy scan results to GitHub Security tab
